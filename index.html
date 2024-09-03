@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Work Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Title -->
+    <h1 id="title">The Future of Work and Remote Working</h1>
+
+    <!-- Description -->
+    <p id="description">This survey aims to understand how people feel about remote work and what they think the future of work will look like.</p>
+
+    <!-- Survey Form -->
+    <form id="survey-form" method="post" action="">
+        <!-- Personal Information Section -->
+        <fieldset>
+            <label id="name-label" for="name">Enter your first name: 
+                <input id="name" name="first-name" type="text" placeholder="John" required />
+            </label>
+            
+            <label id="email-label" for="email">Enter your email address: 
+                <input id="email" name="email" type="email" placeholder="john@example.com" required />
+            </label>
+            
+            <label id="number-label" for="number">Contact number: 
+                <input id="number" name="number" type="number" min="1000000000" max="9999999999" placeholder="1234567890" required />
+            </label>
+        </fieldset>
+
+        <!-- About You Section -->
+        <fieldset>
+            <legend>About You</legend>
+            <label for="age">What is your age?</label>
+            <select id="dropdown" name="age" required>
+                <option value="" disabled selected>Select your age group</option>
+                <option value="under-18">Under 18</option>
+                <option value="18-24">18-24</option>
+                <option value="25-34">25-34</option>
+                <option value="35-44">35-44</option>
+                <option value="45-54">45-54</option>
+                <option value="55-64">55-64</option>
+                <option value="65-older">65 or older</option>
+            </select>
+
+            <label for="employment">What is your job status?</label>
+            <select id="employment" name="employment" required>
+                <option value="" disabled selected>Select your job status</option>
+                <option value="full-time">Working full-time</option>
+                <option value="part-time">Working part-time</option>
+                <option value="freelancer">Freelancer/Contractor</option>
+                <option value="unemployed">Not working</option>
+                <option value="student">Student</option>
+                <option value="retired">Retired</option>
+            </select>
+
+            <label for="industry">What type of job do you do?</label>
+            <input id="industry" name="industry" type="text" required />
+        </fieldset>
+
+        <!-- Your Work Environment Section -->
+        <fieldset>
+            <legend>Your Work Environment</legend>
+            <label>Are you currently working from home?</label>
+            <label><input type="radio" name="work-from-home" value="fully-remote" required /> Yes, all the time</label>
+            <label><input type="radio" name="work-from-home" value="hybrid" /> Yes, sometimes (hybrid)</label>
+            <label><input type="radio" name="work-from-home" value="office" /> No, I work in an office</label>
+
+            <label for="work-satisfaction">How happy are you with your current work setup?</label>
+            <select id="work-satisfaction" name="work-satisfaction" required>
+                <option value="" disabled selected>Select your satisfaction level</option>
+                <option value="very-satisfied">Very happy</option>
+                <option value="satisfied">Happy</option>
+                <option value="neutral">Neutral</option>
+                <option value="unsatisfied">Unhappy</option>
+                <option value="very-unsatisfied">Very unhappy</option>
+            </select>
+        </fieldset>
+
+        <!-- Remote Work Experience Section -->
+        <fieldset>
+            <legend>Remote Work Experience</legend>
+            <label for="enjoy-remote">What do you like most about working from home? (Select all that apply)</label>
+            <label><input type="checkbox" name="enjoy-remote" value="flexible-schedule" /> Flexible schedule</label>
+            <label><input type="checkbox" name="enjoy-remote" value="no-commuting" /> No commuting</label>
+            <label><input type="checkbox" name="enjoy-remote" value="more-productive" /> More productive</label>
+            <label><input type="checkbox" name="enjoy-remote" value="better-balance" /> Better work-life balance</label>
+            <label><input type="checkbox" name="enjoy-remote" value="work-anywhere" /> Can work from anywhere</label>
+            <label><input type="checkbox" name="enjoy-remote" value="other" /> Other: <input type="text" name="enjoy-remote-other" /></label>
+
+            <label for="remote-challenges">What are the biggest problems you face when working from home? (Select all that apply)</label>
+            <label><input type="checkbox" name="remote-challenges" value="communication" /> Hard to communicate with team</label>
+            <label><input type="checkbox" name="remote-challenges" value="distractions" /> Distractions at home</label>
+            <label><input type="checkbox" name="remote-challenges" value="lonely" /> Feeling lonely</label>
+            <label><input type="checkbox" name="remote-challenges" value="work-life-separation" /> Hard to separate work and home life</label>
+            <label><input type="checkbox" name="remote-challenges" value="office-resources" /> Missing office resources</label>
+            <label><input type="checkbox" name="remote-challenges" value="other" /> Other: <input type="text" name="remote-challenges-other" /></label>
+
+            <label for="productivity">Do you feel more productive working from home compared to the office?</label>
+            <select id="productivity" name="productivity" required>
+                <option value="" disabled selected>Select productivity level</option>
+                <option value="much-more-productive">Much more productive</option>
+                <option value="more-productive">A little more productive</option>
+                <option value="same">About the same</option>
+                <option value="less-productive">A little less productive</option>
+                <option value="much-less-productive">Much less productive</option>
+            </select>
+        </fieldset>
+
+        <!-- Technology and Tools Section -->
+        <fieldset>
+            <legend>Technology and Tools</legend>
+            <label for="tools-used">Which tools do you use most often for remote work? (Select all that apply)</label>
+            <label><input type="checkbox" name="tools-used" value="zoom-teams-meet" /> Zoom/Teams/Meet</label>
+            <label><input type="checkbox" name="tools-used" value="slack-teams" /> Slack/Microsoft Teams</label>
+            <label><input type="checkbox" name="tools-used" value="trello-asana-notion" /> Trello/Asana/Notion</label>
+            <label><input type="checkbox" name="tools-used" value="google-microsoft" /> Google Workspace/Microsoft Office 365</label>
+            <label><input type="checkbox" name="tools-used" value="other" /> Other: <input type="text" name="tools-used-other" /></label>
+
+            <label for="tools-satisfaction">Are you happy with the tools you use for remote work?</label>
+            <select id="tools-satisfaction" name="tools-satisfaction" required>
+                <option value="" disabled selected>Select your satisfaction level</option>
+                <option value="very-satisfied">Very happy</option>
+                <option value="satisfied">Happy</option>
+                <option value="neutral">Neutral</option>
+                <option value="unsatisfied">Unhappy</option>
+                <option value="very-unsatisfied">Very unhappy</option>
+            </select>
+
+            <label for="desired-features">What features would you like to see in your remote work tools?</label>
+            <input id="desired-features" name="desired-features" type="text" />
+        </fieldset>
+
+        <!-- The Future of Work Section -->
+        <fieldset>
+            <legend>The Future of Work</legend>
+            <label for="ideal-setup">What would be your ideal work setup?</label>
+            <select id="ideal-setup" name="ideal-setup" required>
+                <option value="" disabled selected>Select your ideal work setup</option>
+                <option value="fully-remote">Fully remote</option>
+                <option value="hybrid">Hybrid (mix of remote and office)</option>
+                <option value="fully-in-office">Fully in-office</option>
+            </select>
+
+            <label for="future-remote">How do you think remote work will change in the next 5 years?</label>
+            <select id="future-remote" name="future-remote" required>
+                <option value="" disabled selected>Select your prediction</option>
+                <option value="increase">It will become more popular</option>
+                <option value="stay-popular">It will stay popular but not for everyone</option>
+                <option value="decrease">It will decrease as people go back to offices</option>
+                <option value="other">Other: <input type="text" name="future-remote-other" /></option>
+            </select>
+
+            <label for="important-skills">What skills do you think will be most important for remote work in the future? (Select all that apply)</label>
+            <label><input type="checkbox" name="important-skills" value="communication" /> Communication</label>
+            <label><input type="checkbox" name="important-skills" value="time-management" /> Time management</label>
+            <label><input type="checkbox" name="important-skills" value="digital-skills" /> Digital skills</label>
+            <label><input type="checkbox" name="important-skills" value="self-motivation" /> Self-motivation</label>
+            <label><input type="checkbox" name="important-skills" value="adaptability" /> Adaptability</label>
+            <label><input type="checkbox" name="important-skills" value="other" /> Other: <input type="text" name="important-skills-other" /></label>
+        </fieldset>
+
+        <!-- Additional Feedback Section -->
+        <fieldset>
+            <legend>Additional Feedback</legend>
+            <label for="additional-feedback">Do you have any other thoughts on remote work and the future of work?</label>
+            <textarea id="additional-feedback" name="additional-feedback" rows="4" cols="50"></textarea>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <input id="submit" type="submit" value="Submit" />
+    </form>
+</body>
+</html>
